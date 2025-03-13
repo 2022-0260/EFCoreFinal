@@ -13,7 +13,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 //Agregar el servico para la gestion de los clientes
 builder.Services.AddScoped<IClienteService, ClienteService>();
 var app = builder.Build();
-
+//Agregar el servico para la gestion de los empleados 
+builder.Services.AddScoped<IEmpleadoService, EmpleadoService>();
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
